@@ -52,7 +52,7 @@
 								<li><a href="${basePath}/role/index.shtml">角色列表</a></li>
 							</@shiro.hasPermission>
 							<@shiro.hasPermission name="/role/allocation.shtml">
-								<li><a href="${basePath}/role/allocation.shtml">角色分配（这是个JSP页面）</a></li>
+								<li><a href="${basePath}/role/allocation.shtml">角色分配</a></li>
 							</@shiro.hasPermission>
 							<@shiro.hasPermission name="/permission/index.shtml">
 								<li><a href="${basePath}/permission/index.shtml">权限列表</a></li>
@@ -69,7 +69,7 @@
 					<a aria-expanded="false" aria-haspopup="true"  role="button" data-toggle="dropdown"  
 						<@shiro.user>  
 							onclick="location.href='${basePath}/user/index.shtml'" href="${basePath}/user/index.shtml" class="dropdown-toggle qqlogin" >
-							${token.nickname?default('阿西吧')}<span class="caret"></span></a>
+							欢迎 ${token.nickname?default('阿西吧')}<span class="caret"></span></a>
 							<ul class="dropdown-menu" userid="${token.id}">
 								<li><a href="${basePath}/user/index.shtml">个人资料</a></li>
 								<li><a href="${basePath}/role/mypermission.shtml">我的权限</a></li>
