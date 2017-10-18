@@ -14,7 +14,7 @@ import java.util.regex.Pattern;
 
 import net.sf.json.JSONArray;
 import net.sf.json.JSONObject;
-import sun.misc.BASE64Decoder;
+//import sun.misc.BASE64Decoder;
 
 
 
@@ -160,27 +160,27 @@ public class StringUtils extends org.apache.commons.lang.StringUtils{
 	 * @param bf  [true|false,true:去掉结尾补充的'=',false:不做处理]
 	 * @return
 	 */
-    public static String getBASE64(String str,boolean...bf) { 
-       if (StringUtils.isBlank(str)) return null; 
-       String base64 = new sun.misc.BASE64Encoder().encode(str.getBytes()) ;
-       //去掉 '='
-       if(isBlank(bf) && bf[0]){
-    	   base64 = base64.replaceAll("=", "");
-       }
-       return base64;
-    }
-
-    /** 将 BASE64 编码的字符串 s 进行解码**/
-    public static String getStrByBASE64(String s) { 
-       if (isBlank(s)) return ""; 
-       BASE64Decoder decoder = new BASE64Decoder(); 
-       try { 
-          byte[] b = decoder.decodeBuffer(s); 
-          return new String(b); 
-       } catch (Exception e) { 
-          return ""; 
-       }
-    }
+//    public static String getBASE64(String str,boolean...bf) { 
+//       if (StringUtils.isBlank(str)) return null; 
+//       String base64 = new sun.misc.BASE64Encoder().encode(str.getBytes()) ;
+//       //去掉 '='
+//       if(isBlank(bf) && bf[0]){
+//    	   base64 = base64.replaceAll("=", "");
+//       }
+//       return base64;
+//    }
+//
+//    /** 将 BASE64 编码的字符串 s 进行解码**/
+//    public static String getStrByBASE64(String s) { 
+//       if (isBlank(s)) return ""; 
+//       BASE64Decoder decoder = new BASE64Decoder(); 
+//       try { 
+//          byte[] b = decoder.decodeBuffer(s); 
+//          return new String(b); 
+//       } catch (Exception e) { 
+//          return ""; 
+//       }
+//    }
     /**
      * 把Map转换成get请求参数类型,如 {"name"=20,"age"=30} 转换后变成 name=20&age=30
      * @param map
