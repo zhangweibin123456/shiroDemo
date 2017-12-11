@@ -1,1 +1,6 @@
-/target/
+.idea/
+huikemgmt.iml
+target
+.project
+.settings/*
+.classpath
