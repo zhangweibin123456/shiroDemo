@@ -86,9 +86,10 @@ public class PermissionServiceImpl extends BaseMybatisDao<UPermissionMapper> imp
 				
 				List<URolePermission> rolePermissions= rolePermissionMapper.findRolePermissionByPid(id);
 				if(null != rolePermissions && rolePermissions.size() > 0){
-					errorCount += rolePermissions.size();
-				}else{
 					successCount+=this.deleteByPrimaryKey(id);
+					
+				}else{
+					errorCount += rolePermissions.size();
 				}
 			}
 			resultMap.put("status", 200);
