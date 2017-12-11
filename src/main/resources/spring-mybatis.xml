@@ -98,9 +98,5 @@
 			expression="execution(public * com.sojson.*.service.impl.*.*(..))" />
 		<aop:advisor advice-ref="txAdvice" pointcut-ref="myPointcut" />
 	</aop:config>
-<!--	<aop:config>-->
-<!--		<aop:pointcut id="myPointcut"-->
-<!--			expression="execution(public * net.wenyifan.*.service.*.*(..))" />-->
-<!--		<aop:advisor advice-ref="txAdvice" pointcut-ref="myPointcut" />-->
-<!--	</aop:config>-->
+
 </beans>
